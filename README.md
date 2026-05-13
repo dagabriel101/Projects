@@ -6,7 +6,7 @@ Process:
 Pulled historical price data from the Polymarket API. Used this to estimate volatility paramter from observed data and simulated possible probability paths. Backtested the model using split training/test data. Finally, I constructed 90% confidence bands on the trajectory of the contract price in order to determine the stability of the model.
 
 Results:
-Actual market probability did stay within the 90% confidence interval. However, the estimated volatily paramter was very small and caused my simulated price to not vary as widely. 
+Actual market probability did stay within the 90% confidence interval. However, the estimated volatily parameter was very small and caused my simulated price to not vary as widely. 
 
 Possible Conclusions:
 The model does need improvement. First, the model assumes constant volatility over the period and continous movements. However, real market dynamics can be discontinous in nature. Contracts also tend to approach either 1 or 0 as they reach expiration. This model does not take that into account. 
