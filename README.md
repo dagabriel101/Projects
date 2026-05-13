@@ -13,9 +13,9 @@ In this project, I develop a stochastic model for prediction market probabilitie
 
 ## Model
 
-\[
+$$
 dP_t = \alpha \sqrt{P_t(1 - P_t)} \circ dW_t
-\]
+$$
 
 This structure ensures:
 
@@ -50,7 +50,7 @@ This suggests the model provides a reasonable short-term approximation of probab
 
 ## Key Insights
 
-- Market uncertainty is highest when probabilities are near 0.5  
+- Market uncertainty is highest near 0.5  
 - Diffusion models can approximate probability dynamics over short horizons  
 - Prediction markets exhibit both continuous evolution and discrete jumps  
 - Confidence bands provide a useful way to assess model plausibility  
@@ -68,9 +68,9 @@ This suggests the model provides a reasonable short-term approximation of probab
 
 ## Extensions
 
-- Jump-diffusion models for news-driven moves  
+- Jump-diffusion models  
 - Time-dependent volatility  
-- Drift terms based on information flow  
+- Drift based on information flow  
 - Bayesian updating frameworks  
 
 ---
