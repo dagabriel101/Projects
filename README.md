@@ -12,4 +12,4 @@ Possible Conclusions:
 The model does need improvement. First, the model assumes constant volatility over the period and continous movements. However, real market dynamics can be discontinous in nature. Contracts also tend to approach either 1 or 0 as they reach expiration. This model does not take that into account. 
 
  `Predictions.py` — data pull, calibration, simulation, and backtesting
-- `Backtest_Model.pdf` — full write-up of the model and results
+`Backtest_Model.pdf` — full write-up of the model and results
