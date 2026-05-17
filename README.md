@@ -91,6 +91,37 @@ This produces a sparse, event-driven trading strategy.
 
 ---
 
+---
+
+## Visualizations
+
+### Price and Trade Signals
+
+The chart below shows the market price along with trade entry and exit points.
+
+- Green markers indicate long entries  
+- Red markers indicate short entries  
+- Black markers indicate exits  
+
+![Price and Trades](results/price_trades.png)
+
+---
+
+### Equity Curve
+
+The cumulative profit and loss of the strategy over time:
+
+![Equity Curve](results/equity_curve.png)
+
+---
+
+### Drawdown
+
+Maximum drawdown over time:
+
+![Drawdown](results/drawdown.png)
+
+
 ## Interpretation
 
 Prediction markets behave differently depending on the level of information flow:
