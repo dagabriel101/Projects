@@ -103,7 +103,7 @@ The chart below shows the market price along with trade entry and exit points.
 - Red markers indicate short entries  
 - Black markers indicate exits  
 
-![Price and Trades](results/price_trades.png)
+![Price and Trades](price_trades.png)
 
 ---
 
@@ -111,7 +111,7 @@ The chart below shows the market price along with trade entry and exit points.
 
 The cumulative profit and loss of the strategy over time:
 
-![Equity Curve](results/equity_curve.png)
+![Equity Curve](equity_curve.png)
 
 ---
 
@@ -119,7 +119,7 @@ The cumulative profit and loss of the strategy over time:
 
 Maximum drawdown over time:
 
-![Drawdown](results/drawdown.png)
+![Drawdown](drawdown.png)
 
 
 ## Interpretation
