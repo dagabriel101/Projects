@@ -2,23 +2,21 @@
 
 This project investigates trading strategies in prediction markets using data from the 2024 U.S. Presidential Election market on Polymarket.
 
-The goal was to model price dynamics and identify exploitable structure in probability-based markets.
+The goal was to model price dynamics in order to identify any exploitable characteristics within prediction markets
 
 ---
 
 ## Initial Hypothesis
 
-Prediction market prices were assumed to exhibit mean reversion around a “fair probability.”
+It is assumed that Prediction market prices will exhibit mean reversion around a “fair probability.”
 
-To model this, we transform probabilities into log-odds space:
+To model this, we may use a log odds-transformation
 
 $$
 X_t = \log\left(\frac{p_t}{1 - p_t}\right)
 $$
 
-This transformation allows us to treat probabilities as an unbounded time series.
-
-We then model the dynamics as mean-reverting:
+We then use are mean-reverting assumption:
 
 $$
 dX_t = \kappa(\mu - X_t)\,dt + \sigma\,dW_t
@@ -28,15 +26,7 @@ where:
 - $\mu$ is the long-run mean  
 - $\kappa$ is the mean reversion speed  
 - $\sigma$ is volatility  
-
-**Result:**  
-Mean-reversion strategies consistently underperformed.
-
 ---
-
-## Key Finding
-
-Large deviations from model-implied prices correspond to **information arrival**, not mispricing.
 
 We define a signal measuring how far the model prediction deviates from the current market price:
 
@@ -44,17 +34,7 @@ $$
 Z_t = \frac{\hat{p}_{t+1} - p_t}{\hat{\sigma}_t}
 $$
 
-Empirically, large values of $|Z_t|$ do not revert. Instead, they indicate that new information has entered the market.
-
-In practice, we observe:
-
-$$
-\text{sign}(p_{t+1} - p_t) \approx \text{sign}(Z_t)
-$$
-
-This suggests short-term momentum rather than mean reversion.
-
----
+Larger values of $|Z_t|$ may indicate a new information flow impacting the market.
 
 ## Final Strategy
 
@@ -65,7 +45,9 @@ The final strategy is:
 3. Enter in the direction of the move (momentum)  
 4. Exit after a short time horizon  
 
-This produces a sparse, event-driven trading strategy.
+This is an event-driven trading strategy. 
+
+Note: This is a sparse strategy, and still needs to be scaled
 
 ---
 
